@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
+      <div class="container">
+        <a class="navbar-brand" href="#">FBSocial</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto d-flex align-items-center">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link loggedOut" style="display: none">
+              <div class="d-flex align-items-center">
+                <img src="" id="userProfileImage" alt="" class="rounded-pill" style="width: 3rem;" />
+                <p id="username" class="mx-2"></p>
+                <button id="logout" class="btn btn-secondary btn-sm">
+                  Logout
+                </button>
+              </div>
+            </a>
+            <a class="nav-link loggedIn" style="display: none">
+              <button id="btn-login-google" class="btn btn-secondary btn-sm">
+                Login with Google
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row pt-4">
+        <div class="col-md-5">
+          <!-- Post Form -->
+          <form id="postForm">
+            <textarea id="content" rows="3" class="form-control"></textarea>
+            <input type="file" id="imagePost" class="form-control" />
+            <button class="btn btn-primary btn-sm mt-2">Post</button>
+          </form>
+        </div>
+
+        <div class="col-md-7">
+          <div id="postsList"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
